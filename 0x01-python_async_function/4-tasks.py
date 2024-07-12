@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 """Execute multiple coroutines at the same time with async"""
 from typing import List
@@ -13,4 +12,3 @@ async def task_wait_n(n: int, max_delay: int) -> List[float]:
     futures = asyncio.as_completed(futures)
     delays = [await future for future in futures]
     return delays
-
